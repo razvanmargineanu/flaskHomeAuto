@@ -1,7 +1,7 @@
 Flask Home auto
 
 ==========
-Modified the original flaskberry and added some gpio controll for my home light controll
+Modified the original flaskberry and added some gpio control for my home light automation.
 
 https://github.com/rangermeier/flaskberry -- original github repo
 2012, Rupert Angermeier
