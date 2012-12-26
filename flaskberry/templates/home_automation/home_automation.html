@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block contents %}
+
+<h2>Home Automation</h2>
+
+<div class="well span6">{{ uptime }} <p> {{ list_folder }}</div>
+<div class="well span4"><img src="http://home.oddmedia.ro:5500/?action=stream">LivingRoom</img></div>
+<div class="span4 offset6">
+ <a class="btn btn-danger"  id="lightOn" ><i class="icon-off icon-white"></i> Turn On Light</a>
+ <a class="btn btn-danger" id="lightOff"><i class="icon-off icon-white"></i>  Turn Off Light</a>
+</div>
+
+<script type="text/javascript">
+
+$("#lightOn").click(function() {
+  $.ajax("{{ url_for('home_automation.turnLightON') }}");
+
+
+});
+
+$("#lightOff").click(function() {
+  $.ajax("{{ url_for('home_automation.turnLightOFF') }}");
+  
+});
+
+</script>
+
+{% endblock %}
