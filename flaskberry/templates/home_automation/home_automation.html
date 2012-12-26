@@ -14,13 +14,13 @@
 <script type="text/javascript">
 
 $("#lightOn").click(function() {
-  $.ajax("{{ url_for('home_automation.turnLightON') }}");
+  $.ajax("http://home.oddmedia.ro:5000/home_automation/turnLightON");
 
 
 });
 
 $("#lightOff").click(function() {
-  $.ajax("{{ url_for('home_automation.turnLightOFF') }}");
+  $.ajax("http://home.oddmedia.ro:5000/home_automation/turnLightON");
   
 });
 
